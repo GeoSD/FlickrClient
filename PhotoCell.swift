@@ -10,6 +10,7 @@ import UIKit
 import Kingfisher
 
 class PhotoCell: UICollectionViewCell {
+    
     @IBOutlet weak var photoImageView: UIImageView!
     
     var imageURL: String? {

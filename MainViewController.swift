@@ -137,7 +137,7 @@ extension MainViewController {
                     }
                     
                     let photosJSON = json["photos"]["photo"]
-                    let photos = photosJSON.arrayValue.flatMap { Photo(json: $0) }
+                    let photos = photosJSON.arrayValue.compactMap { Photo(json: $0) }
                     complition?(photos)
                     
                 case .failure(let error):
